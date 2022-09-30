@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro.EditorUtilities;
+using Cinemachine.Editor;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BallJump : MonoBehaviour
 {
+    public event Action OnPassing;
     [SerializeField][Range(1f, 1000f)] private float _farceJump;
     private Vector3 _directionJump;
     private Rigidbody _rigidbody;
@@ -18,11 +18,17 @@ public class BallJump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Label 1");
+        Debug.Log("Label 2");
         if (collision.gameObject.CompareTag("dblock"))
         {
             Jump();
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("lblock"))
+            OnPassing?.Invoke();
     }
 
     private void Jump()
