@@ -16,9 +16,9 @@ public class BallJump : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Label 2");
         if (collision.gameObject.CompareTag("dblock"))
         {
             Jump();
@@ -32,8 +32,7 @@ public class BallJump : MonoBehaviour
     }
 
     private void Jump()
-    {   
-        Debug.Log("Label 1");
+    {
         _directionJump.y = _farceJump;
         _rigidbody.AddForce(_directionJump);
     }
