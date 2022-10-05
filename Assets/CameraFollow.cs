@@ -20,6 +20,6 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         _direction.y = _target.position.y;
-        _transform.position = Vector3.Lerp(_transform.position, _direction, _speedFollow * Time.deltaTime);
+        _transform.position = Vector3.Lerp(_transform.position, _direction, _speedFollow * Time.smoothDeltaTime);
     }
 }

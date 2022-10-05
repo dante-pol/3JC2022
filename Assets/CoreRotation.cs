@@ -10,7 +10,7 @@ public class CoreRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _velocityRotate = 5;
+        _velocityRotate = 3.5f;
         _trasform = transform;
     }
 

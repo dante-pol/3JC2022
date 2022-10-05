@@ -16,7 +16,7 @@ public class SwipeDetection : MonoBehaviour
             Touch touch = InputController.GetTouch;
             if (touch.phase == TouchPhase.Moved)
             {
-                if (Input.GetTouch(0).deltaPosition.x > 0)
+                if (touch.deltaPosition.x > 0)
                     IsSwipeRight = true;
                 else
                     IsSwipeLeft = true;
