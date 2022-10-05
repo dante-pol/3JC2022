@@ -757,6 +757,8 @@ MonoBehaviour:
   - {fileID: 8286984080614235536, guid: 4fe54a3471f13f240a52e40062955690, type: 3}
   - {fileID: 6065940336467046217, guid: 690228532e036b645a115a6129a2dabf, type: 3}
   - {fileID: 3736484859372775719, guid: 345073dfc9d9228489218e56f80d3a1b, type: 3}
+  - {fileID: 8684650763670077839, guid: e3c7b98da4c77c2429c5be6adcc8ae3a, type: 3}
+  - {fileID: 1043125664707219052, guid: bca057a6b7a3ff8448de4b6543fd6219, type: 3}
   _parent: {fileID: 1786691098}
 --- !u!1 &1786691097
 GameObject:
@@ -868,6 +870,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9145504356749181700, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
+      propertyPath: _farceJump
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 9145504356749181702, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
       propertyPath: m_RootOrder
       value: 5

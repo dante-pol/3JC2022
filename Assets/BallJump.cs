@@ -34,6 +34,6 @@ public class BallJump : MonoBehaviour
     private void Jump()
     {
         _directionJump.y = _farceJump;
-        _rigidbody.AddForce(_directionJump);
+        _rigidbody.AddForce(_directionJump, ForceMode.Force);
     }
 }
