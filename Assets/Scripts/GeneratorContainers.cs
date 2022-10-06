@@ -6,12 +6,12 @@ public class GeneratorContainers : MonoBehaviour
     #region DataGenerator
     [Header("Data generator")]
     [SerializeField][Range(1, 10)] private int _offsetBetweenContainers;
-    [SerializeField][Range(5, 20)] private int _countContainers;
+    [SerializeField][Range(5, 100)] private int _countContainers;
     public int OffsetBetweenContainers => _offsetBetweenContainers;
     public int CountContainers => _countContainers;
     #endregion
 
-    #region
+    #region DataRing
     [Header("Data ring")]
     [SerializeField][Range(800, 5000)] private float _explosionForce;
     [SerializeField][Range(2, 10)] private float _explosionRadius;
