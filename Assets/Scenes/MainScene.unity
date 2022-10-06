@@ -435,15 +435,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &875606426 stripped
+--- !u!114 &875606432 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9145504356749181700, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 875606432, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
   m_PrefabInstance: {fileID: 9145504356548883102}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d838151d1d08be4db0ddeb2f28db932, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bc9798e621cc1341b83bb0798281a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &963194225
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _generator: {fileID: 1686352787}
-  _ball: {fileID: 875606426}
+  _ball: {fileID: 875606432}
 --- !u!1 &1686352785
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,9 +644,11 @@ MonoBehaviour:
   - {fileID: 1244967926688572054, guid: 690228532e036b645a115a6129a2dabf, type: 3}
   - {fileID: 1244967926688572054, guid: 690228532e036b645a115a6129a2dabf, type: 3}
   - {fileID: 5380761559844051245, guid: 345073dfc9d9228489218e56f80d3a1b, type: 3}
-  - {fileID: 5380761559844051245, guid: 345073dfc9d9228489218e56f80d3a1b, type: 3}
-  - {fileID: 5380761559844051245, guid: 345073dfc9d9228489218e56f80d3a1b, type: 3}
-  _ball: {fileID: 875606426}
+  - {fileID: 5299959604952023644, guid: e3c7b98da4c77c2429c5be6adcc8ae3a, type: 3}
+  - {fileID: 5299959604952023644, guid: e3c7b98da4c77c2429c5be6adcc8ae3a, type: 3}
+  - {fileID: 6309355988442231960, guid: bca057a6b7a3ff8448de4b6543fd6219, type: 3}
+  - {fileID: 6309355988442231960, guid: bca057a6b7a3ff8448de4b6543fd6219, type: 3}
+  - {fileID: 6309355988442231960, guid: bca057a6b7a3ff8448de4b6543fd6219, type: 3}
   _parent: {fileID: 1786691098}
 --- !u!1 &1786691097
 GameObject:
@@ -758,6 +760,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 875606432, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
+      propertyPath: _farceJump
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 9145504356749181702, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -806,5 +812,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball_prefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9145504356749181700, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}

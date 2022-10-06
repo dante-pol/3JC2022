@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallForCamera : MonoBehaviour
 {
     [SerializeField] private GeneratorContainers _generator;
-    [SerializeField] private BallJump _ball;
+    [SerializeField] private Ball _ball;
     private float[] _coordinatePoint;
     private int _currentPoint;
     private Vector3 _currentPosition;

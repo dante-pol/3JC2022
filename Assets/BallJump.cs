@@ -1,42 +1,20 @@
-using Cinemachine.Editor;
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class BallJump : MonoBehaviour
+public class BallJump : IBallBehaviour
 {
-    public event Action OnPassing;
-    [SerializeField][Range(1f, 1000f)] private float _farceJump;
+    private Ball _ball;
     private Vector3 _directionJump;
-    private Rigidbody _rigidbody;
 
-    private void Awake()
+    public BallJump(Ball ball)
     {
-        _directionJump = new Vector3(0, _farceJump, 0);
-        _rigidbody = GetComponent<Rigidbody>();
+        _ball = ball;
+        _directionJump = new Vector3(0, ball.ForceJump, 0);
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    public void Behaviour()
     {
-        if (collision.gameObject.CompareTag("dblock"))
-        {
-            Jump();
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("lblock"))
-        {
-            OnPassing?.Invoke();
-            other.GetComponent<RingContainer>().RunExplosion();
-        }
-    }
-
-    private void Jump()
-    {
-        _directionJump.y = _farceJump;
-        _rigidbody.AddForce(_directionJump, ForceMode.Force);
+        _directionJump.y = _ball.ForceJump;
+        _ball.GetRigidbody.AddForce(_directionJump, ForceMode.Force);
     }
 }

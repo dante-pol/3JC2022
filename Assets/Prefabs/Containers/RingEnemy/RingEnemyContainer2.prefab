@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043125664707219346}
   - component: {fileID: 1043125664707219053}
+  - component: {fileID: 6309355988442231960}
   m_Layer: 0
   m_Name: RingEnemyContainer2
   m_TagString: lblock
@@ -49,6 +50,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.5, z: 10}
   m_Center: {x: 0, y: -0.3, z: 0}
+--- !u!114 &6309355988442231960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043125664707219052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfc70415d074dc4996557905b09dd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _elements:
+  - {fileID: 1213914454456939750}
+  - {fileID: 3170771680176032220}
+  - {fileID: 1213914454430513085}
+  - {fileID: 3170771681092052842}
 --- !u!1001 &1043125663569308568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +124,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97876f70e42235c478ec438bb049285f, type: 3}
+--- !u!114 &3170771681092052842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2484075256222338290, guid: 97876f70e42235c478ec438bb049285f, type: 3}
+  m_PrefabInstance: {fileID: 1043125663569308568}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2a2d299b366e4794aa791bde9354b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4341074249318342297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3622993361085101313, guid: 97876f70e42235c478ec438bb049285f, type: 3}
@@ -168,6 +197,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609250f907db4b941987b53e1654d915, type: 3}
+--- !u!114 &1213914454456939750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2207148097222359485, guid: 609250f907db4b941987b53e1654d915, type: 3}
+  m_PrefabInstance: {fileID: 1043125664355454299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2a2d299b366e4794aa791bde9354b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7113174983031280323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7840485160071356312, guid: 609250f907db4b941987b53e1654d915, type: 3}
@@ -230,6 +270,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609250f907db4b941987b53e1654d915, type: 3}
+--- !u!114 &1213914454430513085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2207148097222359485, guid: 609250f907db4b941987b53e1654d915, type: 3}
+  m_PrefabInstance: {fileID: 1043125664381980160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2a2d299b366e4794aa791bde9354b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7113174983040471448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7840485160071356312, guid: 609250f907db4b941987b53e1654d915, type: 3}
@@ -292,6 +343,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97876f70e42235c478ec438bb049285f, type: 3}
+--- !u!114 &3170771680176032220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2484075256222338290, guid: 97876f70e42235c478ec438bb049285f, type: 3}
+  m_PrefabInstance: {fileID: 1043125664602555694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f2a2d299b366e4794aa791bde9354b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4341074250181505071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3622993361085101313, guid: 97876f70e42235c478ec438bb049285f, type: 3}

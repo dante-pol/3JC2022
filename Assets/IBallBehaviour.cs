@@ -1,0 +1,4 @@
+interface IBallBehaviour
+{
+    void Behaviour();
+}
