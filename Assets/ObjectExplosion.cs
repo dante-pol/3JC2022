@@ -7,7 +7,7 @@ public class ObjectExplosion : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
-        rb.AddExplosionForce(explosionForce, position, explosionRadius, 15.0F);
+        rb.AddExplosionForce(explosionForce, position, explosionRadius, -3f);
 
     }
 }
