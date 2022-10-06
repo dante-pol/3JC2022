@@ -4,19 +4,23 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Ball : MonoBehaviour
 {
+    #region BallData
     public bool IsLive { get; private set; }
+    [SerializeField][Range(1f, 1000f)] private float _farceJump;
     public float ForceJump => _farceJump;
-    public Rigidbody GetRigidbody => _rigidbody;
+    #endregion
 
     public event Action OnPassing;
+    public event Action OnDead;
+    public Rigidbody GetRigidbody => _rigidbody;
+    private Rigidbody _rigidbody;
 
     #region BallBehaviour
     private IBallBehaviour _ballJump;
     private IBallBehaviour _ballDestroy;
+    private IBallBehaviour _ballAcceleration;
     #endregion
 
-    private Rigidbody _rigidbody;
-    [SerializeField][Range(1f, 1000f)] private float _farceJump;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,9 +35,10 @@ public class Ball : MonoBehaviour
         {
             _ballJump.Behaviour();
         }
-        else if (true)
+        else if (collision.gameObject.CompareTag("eblock"))
         {
-
+            OnDead?.Invoke();
+            _ballDestroy.Behaviour();
         }
     }
     
