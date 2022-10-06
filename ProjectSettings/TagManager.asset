@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dblock
   - lblock
+  - eblock
   layers:
   - Default
   - TransparentFX
