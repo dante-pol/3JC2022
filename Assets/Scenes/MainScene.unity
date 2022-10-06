@@ -760,10 +760,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 875606432, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
-      propertyPath: _farceJump
-      value: 350
-      objectReference: {fileID: 0}
     - target: {fileID: 9145504356749181702, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -812,6 +808,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: ball_prefab
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9145504356749181700, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
