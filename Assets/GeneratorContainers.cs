@@ -13,7 +13,7 @@ public class GeneratorContainers : MonoBehaviour
 
     #region
     [Header("Data ring")]
-    [SerializeField][Range(2, 10)] private float _explosionForce;
+    [SerializeField][Range(800, 5000)] private float _explosionForce;
     [SerializeField][Range(2, 10)] private float _explosionRadius;
     #endregion
 

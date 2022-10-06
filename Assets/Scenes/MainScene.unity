@@ -655,7 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _offsetBetweenContainers: 6
   _countContainers: 14
-  _explosionForce: 10
+  _explosionForce: 1000
   _explosionRadius: 5
   _prefabs:
   - {fileID: 7843600386536940625, guid: 4fe54a3471f13f240a52e40062955690, type: 3}

@@ -22,6 +22,13 @@ public class RingContainer : MonoBehaviour
         {
             element.Explosion(_explosionForce, _explosionRadius, transform.position);
         }
+        StartCoroutine(Delete());
+    }
+
+    private IEnumerator Delete()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 }
 
