@@ -28,7 +28,10 @@ public class BallJump : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("lblock"))
+        {
             OnPassing?.Invoke();
+            other.GetComponent<RingContainer>().RunExplosion();
+        }
     }
 
     private void Jump()

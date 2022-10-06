@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2453434408981270126}
   - component: {fileID: 7985413560470074947}
   - component: {fileID: 2541379141457987132}
-  - component: {fileID: 8441511543579214624}
+  - component: {fileID: 2484075256222338290}
   m_Layer: 0
   m_Name: ring_prefab
   m_TagString: dblock
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8441511543579214624
+--- !u!114 &2484075256222338290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,9 +125,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4110842978646568891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfc70415d074dc4996557905b09dd55, type: 3}
+  m_Script: {fileID: 11500000, guid: 71f2a2d299b366e4794aa791bde9354b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionForce: 2
-  _explosionRadius: 2
-  _ball: {fileID: 9145504356749181700, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
