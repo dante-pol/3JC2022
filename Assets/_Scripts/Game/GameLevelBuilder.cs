@@ -1,11 +1,10 @@
 using Root.Assets._Scripts.Ball;
 using Root.Assets._Scripts.Ring;
-using System.Data;
 using UnityEngine;
 
 namespace Root.Assets._Scripts.Game
 {
-    public class GeneratorContainers : MonoBehaviour
+    public class GameLevelBuilder : MonoBehaviour
     {
         #region DataGenerator
         [Header("Data generator")]
@@ -25,7 +24,7 @@ namespace Root.Assets._Scripts.Game
         [SerializeField] private BallJump _ball;
         [SerializeField] private Transform _parent;
 
-        private void Awake()
+        public void Build()
         {
             for (int i = 1; i <= _countContainers; i++)
             {

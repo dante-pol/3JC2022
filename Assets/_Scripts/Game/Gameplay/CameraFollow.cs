@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Game
+namespace Root.Assets._Scripts.Game.Gameplay
 {
     public class CameraFollow : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace Root.Assets._Scripts.Game
         private Transform _transform;
         private Vector3 _direction;
 
-        private void Start()
+        public void Start()
         {
             _transform = transform;
             _direction = _transform.position;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Game
+namespace Root.Assets._Scripts.Game.Gameplay
 {
     public class SwipeDetection : MonoBehaviour
     {
@@ -9,9 +9,9 @@ namespace Root.Assets._Scripts.Game
 
         private void Update()
         {
-            if (InputController.IsTouch)
+            if (InputSystem.IsTouch)
             {
-                Touch touch = InputController.GetTouch;
+                Touch touch = InputSystem.GetTouch;
                 if (touch.phase == TouchPhase.Moved)
                 {
                     if (touch.deltaPosition.x > 0)

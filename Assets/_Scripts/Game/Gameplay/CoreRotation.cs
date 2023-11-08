@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Game
+namespace Root.Assets._Scripts.Game.Gameplay
 {
     public class CoreRotation : MonoBehaviour
     {
@@ -8,7 +8,7 @@ namespace Root.Assets._Scripts.Game
         [SerializeField][Range(1, 8)] private float _velocityRotate;
         private Transform _trasform;
 
-        private void Start()
+        public void Start()
         {
             _velocityRotate = 3.5f;
             _trasform = transform;

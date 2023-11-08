@@ -26,7 +26,7 @@ namespace Root.Assets._Scripts.Ball
         private IBallBehaviour _ballAcceleration;
         #endregion
 
-        private void Awake()
+        public void Init()
         {
             _ballJump = new BallJump(this);
             _ballDestroy = new BallDestroy(this);

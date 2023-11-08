@@ -5,7 +5,7 @@ namespace Root.Assets._Scripts.Ball
 {
     public class BallForCamera : MonoBehaviour
     {
-        [SerializeField] private GeneratorContainers _generator;
+        [SerializeField] private GameLevelBuilder _generator;
         [SerializeField] private Ball _ball;
         private float[] _coordinatePoint;
         private int _currentPoint;
