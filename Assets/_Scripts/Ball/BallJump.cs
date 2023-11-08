@@ -1,20 +1,22 @@
-using System;
 using UnityEngine;
 
-public class BallJump : IBallBehaviour
+namespace Root.Assets._Scripts.Ball
 {
-    private Ball _ball;
-    private Vector3 _directionJump;
-
-    public BallJump(Ball ball)
+    public class BallJump : IBallBehaviour
     {
-        _ball = ball;
-        _directionJump = new Vector3(0, ball.ForceJump, 0);
-    }
+        private Ball _ball;
+        private Vector3 _directionJump;
 
-    public void Behaviour()
-    {
-        _directionJump.y = _ball.ForceJump;
-        _ball.GetRigidbody.AddForce(_directionJump, ForceMode.Force);
+        public BallJump(Ball ball)
+        {
+            _ball = ball;
+            _directionJump = new Vector3(0, ball.ForceJump, 0);
+        }
+
+        public void Behaviour()
+        {
+            _directionJump.y = _ball.ForceJump;
+            _ball.GetRigidbody.AddForce(_directionJump, ForceMode.Force);
+        }
     }
 }

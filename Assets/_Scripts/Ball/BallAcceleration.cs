@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallAcceleration : IBallBehaviour
+namespace Root.Assets._Scripts.Ball
 {
-    private Ball _ball;
-
-    public BallAcceleration(Ball ball)
+    public class BallAcceleration : IBallBehaviour
     {
-        _ball = ball;
-    }
+        private Ball _ball;
 
-    public void Behaviour()
-    {
-        throw new System.NotImplementedException();
+        public BallAcceleration(Ball ball)
+        {
+            _ball = ball;
+        }
+
+        public void Behaviour()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

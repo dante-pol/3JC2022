@@ -1,13 +1,15 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class ObjectExplosion : MonoBehaviour
+namespace Root.Assets._Scripts.Ring
 {
-    public void Explosion(float explosionForce, float explosionRadius, Vector3 position)
+    [RequireComponent(typeof(Rigidbody))]
+    public class ObjectExplosion : MonoBehaviour
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.isKinematic = false;
-        rb.AddExplosionForce(explosionForce, position, explosionRadius, -3f);
-
+        public void Explosion(float explosionForce, float explosionRadius, Vector3 position)
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddExplosionForce(explosionForce, position, explosionRadius, -3f);
+        }
     }
 }

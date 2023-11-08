@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 
-class BallDestroy : IBallBehaviour
+namespace Root.Assets._Scripts.Ball
 {
-    private Ball _ball;
-
-    public BallDestroy(Ball ball)
+    class BallDestroy : IBallBehaviour
     {
-        _ball = ball;
-    }
+        private Ball _ball;
 
-    public void Behaviour()
-    {
-        throw new System.NotImplementedException();
+        public BallDestroy(Ball ball)
+        {
+            _ball = ball;
+        }
+
+        public void Behaviour()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

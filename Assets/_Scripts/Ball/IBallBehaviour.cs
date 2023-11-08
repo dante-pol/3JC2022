@@ -1,4 +1,7 @@
-interface IBallBehaviour
+namespace Root.Assets._Scripts.Ball
 {
-    void Behaviour();
+    interface IBallBehaviour
+    {
+        void Behaviour();
+    }
 }

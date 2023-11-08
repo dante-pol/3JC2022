@@ -1,7 +1,7 @@
 using Root._Scripts.Tools;
 using UnityEngine;
 
-namespace Root._Scripts.Main
+namespace Root.Assets._Scripts.Main
 {
     public class GameBootstrap : MonoBehaviour
     {
