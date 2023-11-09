@@ -7,7 +7,7 @@ namespace Root.Assets._Scripts.Main
 {
     public class GameBootstrap : MonoBehaviour
     {
-        public static GameBootstrap Instance { get; private set; }
+        public static GameBootstrap Instance { get; private set; } = null;
         
         public GameData GetGameData { get; private set; }
 
@@ -15,16 +15,19 @@ namespace Root.Assets._Scripts.Main
         {
             if (IsInitGame()) return;
 
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+
             LoadGameData();
 
             LoadGame();
         }
 
+        private bool IsInitGame()
+            => Instance != null ? true : false;
+
         private void LoadGameData()
             => GetGameData = SaveLoadGameData.Load();
-
-        private bool IsInitGame()
-            => Instance != null ? true : Instance = this;
 
         private void LoadGame()
             => ScenesLoader.Load(IDScenes.GAME_SCENE);
