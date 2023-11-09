@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Game
+namespace Root.Assets._Scripts.GUI
 {
     public class GUIManager : MonoBehaviour
     {
-        internal void Init()
+        public void Init()
         {
             
         }
