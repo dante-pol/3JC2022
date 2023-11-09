@@ -2,7 +2,7 @@ using Root.Assets._Scripts.Ring;
 using System;
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Ball
+namespace Root.Assets._Scripts.Player
 {
     [RequireComponent(typeof(Rigidbody))]
     public class Ball : MonoBehaviour
@@ -17,32 +17,47 @@ namespace Root.Assets._Scripts.Ball
         public event Action OnPassing;
         public event Action OnDead;
 
+        public int StepsForShield { get; private set; }
+        public bool IsAtiveShield { get; private set; }        
+
         public Rigidbody GetRigidbody => _rigidbody;
         private Rigidbody _rigidbody;
 
         #region BallBehaviour
-        private IBallBehaviour _ballJump;
-        private IBallBehaviour _ballDestroy;
-        private IBallBehaviour _ballAcceleration;
+        private BallController _ballController;
+        private BallDestroy _ballDestroy;
         #endregion
 
-        public void Init()
+        private void Start()
         {
-            _ballJump = new BallJump(this);
+            _ballController = new BallController(this);
             _ballDestroy = new BallDestroy(this);
+
+            StepsForShield = 3;
+            IsAtiveShield = false;
             _rigidbody = GetComponent<Rigidbody>();
         }
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (IsAtiveShield)
+            {
+                _ballController.Jump();
+
+                OnPassing?.Invoke();
+                collision.gameObject.GetComponentInParent<RingContainer>().RunExplosion();
+
+                ResetShield();
+            }
+
             if (collision.gameObject.CompareTag("dblock"))
             {
-                _ballJump.Behaviour();
-            }
+                _ballController.Jump();
+            } 
             else if (collision.gameObject.CompareTag("eblock"))
             {
                 OnDead?.Invoke();
-                _ballDestroy.Behaviour();
+                _ballDestroy.Destroy();
             }
         }
 
@@ -50,9 +65,22 @@ namespace Root.Assets._Scripts.Ball
         {
             if (other.CompareTag("lblock"))
             {
+                _ballController.IncreasePassedRings();
                 OnPassing?.Invoke();
                 other.GetComponent<RingContainer>().RunExplosion();
             }
+        }
+
+        public void ActiveShield()
+        {
+            Debug.Log("Kar kar");
+            IsAtiveShield = true;
+        }
+
+        public void ResetShield()
+        {
+            Debug.Log("Label 2");
+            IsAtiveShield = false;
         }
     }
 }

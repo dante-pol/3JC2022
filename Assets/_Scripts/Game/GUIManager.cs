@@ -7,7 +7,7 @@ namespace Root.Assets._Scripts.Game
     {
         internal void Init()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

@@ -1,7 +1,7 @@
 using Root.Assets._Scripts.Game;
 using UnityEngine;
 
-namespace Root.Assets._Scripts.Ball
+namespace Root.Assets._Scripts.Player
 {
     public class BallForCamera : MonoBehaviour
     {
