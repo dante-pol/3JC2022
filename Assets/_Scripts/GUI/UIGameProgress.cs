@@ -6,11 +6,11 @@ namespace Root.Assets._Scripts.GUI
 {
     public class UIGameProgress : MonoBehaviour
     {
-        private const int STEP = 1;
-        
         [SerializeField] private Text _txtNextLevel;
         [SerializeField] private Text _txtCurrentLevel;
         [SerializeField] private Image _imgHolder;
+
+        private const int STEP = 1;
 
         private GameData _gameData;
 

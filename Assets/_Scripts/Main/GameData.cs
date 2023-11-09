@@ -3,10 +3,14 @@
 namespace Root.Assets._Scripts.Main
 {
     [Serializable]
-    public struct GameData
+    public class GameData
     {
-        public int CurrentLevel => _currentLevel;
+        public int CurrentLevel 
+            => _currentLevel;
 
         private int _currentLevel;
+
+        public GameData()
+            => _currentLevel = 0;
     }
 }
