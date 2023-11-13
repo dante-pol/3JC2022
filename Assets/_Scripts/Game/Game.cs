@@ -37,7 +37,7 @@ namespace Root.Assets._Scripts.Game
         {
             _gameBackground = new GameBackgroundController();
 
-            _guiManager.Init(_gameBootstrap.GetGameData);
+            _guiManager.Init(_levelBuilder, _gameBootstrap.GetGameData, _ball);
             _levelBuilder.Init(_gameBackground, _guiManager);
             _gameWin.Init(_gameBootstrap.GetGameData, _guiManager);
             

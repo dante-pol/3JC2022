@@ -61,8 +61,7 @@ namespace Root.Assets._Scripts.Game
 
         private void UpdateGUI()
         {
-            _guiManager.GameProgress.UpdateGameProgress();
-            _guiManager.GameProgress.UpdatePlaceHolder(0);
+            _guiManager.GameProgress.InitGUI();
 
             _guiManager.SetActivePanelWin(false);
             _guiManager.SetActivePanelLoss(false);

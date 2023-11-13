@@ -1,5 +1,7 @@
+using Root.Assets._Scripts.Game;
 using Root.Assets._Scripts.Game.Gameplay;
 using Root.Assets._Scripts.Main;
+using Root.Assets._Scripts.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,9 +20,9 @@ namespace Root.Assets._Scripts.GUI
 
         [SerializeField] private Button _btn_Play;
 
-        public void Init(GameData getGameData)
+        public void Init(GameLevelBuilder gameLevelBuilder, GameData getGameData, Ball ball)
         {
-            _gameProgress.Init(getGameData);
+            _gameProgress.Init(gameLevelBuilder, getGameData, ball);
         }
 
         private void OnEnable()
