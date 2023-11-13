@@ -24,23 +24,19 @@ namespace Root.Assets._Scripts.GUI
         }
 
         private void OnEnable()
-        {
-            _btn_Play.onClick.AddListener(() => 
-            { 
+            => _btn_Play.onClick.AddListener(() =>
+            {
                 InputSystem.IsPlay = true;
                 _btn_Play.gameObject.SetActive(false);
             });
-        }
 
         private void OnDisable()
-        {
-            _btn_Play.onClick.RemoveAllListeners();
-        }
+            => _btn_Play.onClick.RemoveAllListeners();
 
         public void SetActivePanelWin(bool value)
             => _panelWin.gameObject.SetActive(value);
 
         public void SetActivePanelLoss(bool value)
-            => _panelWin.gameObject.SetActive(value);
+            => _panelLoss.gameObject.SetActive(value);
     }
 }

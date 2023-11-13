@@ -1,3 +1,5 @@
+using Root.Assets._Scripts.Game.Gameplay;
+using Root.Assets._Scripts.GUI;
 using Root.Assets._Scripts.Ring;
 using System;
 using UnityEngine;
@@ -28,7 +30,7 @@ namespace Root.Assets._Scripts.Player
         private BallDestroy _ballDestroy;
         #endregion
 
-        private void Start()
+        public void Start()
         {
             _ballController = new BallController(this);
             _ballDestroy = new BallDestroy(this);

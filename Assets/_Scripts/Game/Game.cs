@@ -2,6 +2,7 @@
 using Root.Assets._Scripts.Game.Gameplay;
 using Root.Assets._Scripts.GUI;
 using Root.Assets._Scripts.Main;
+using Root.Assets._Scripts.Player;
 using UnityEngine;
 
 namespace Root.Assets._Scripts.Game
@@ -11,9 +12,11 @@ namespace Root.Assets._Scripts.Game
         [SerializeField] private GameLevelBuilder _levelBuilder;
         [SerializeField] private GUIManager _guiManager;
         [SerializeField] private GameWin _gameWin;
+        [SerializeField] private Ball _ball;
 
         private GameBootstrap _gameBootstrap;
         private GameBackgroundController _gameBackground;
+        private GameLoss _gameLoss;
 
         private void Awake()
         {
@@ -37,6 +40,8 @@ namespace Root.Assets._Scripts.Game
             _guiManager.Init(_gameBootstrap.GetGameData);
             _levelBuilder.Init(_gameBackground, _guiManager);
             _gameWin.Init(_gameBootstrap.GetGameData, _guiManager);
+            
+            _gameLoss = new GameLoss(_guiManager, _ball);
         }
 
         private void BuildGameplay()
