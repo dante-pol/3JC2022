@@ -4,6 +4,8 @@ namespace Root.Assets._Scripts.Player
 {
     public class BallController
     {
+        public bool IsJump { get; private set; }
+
         private readonly Ball _ball;
 
         private int _countPassedRings;
@@ -16,10 +18,15 @@ namespace Root.Assets._Scripts.Player
             _directionJump = new Vector3(0, ball.ForceJump, 0);
         }
 
+        public void Update()
+        {
+
+        }
+
         public void Jump()
         {
-            _directionJump.y = _ball.ForceJump;
-            _ball.GetRigidbody.AddForce(_directionJump, ForceMode.Force);
+            _ball.GetRigidbody.velocity = _directionJump;
+            IsJump = false;
         }
 
         public void IncreasePassedRings()
@@ -27,15 +34,10 @@ namespace Root.Assets._Scripts.Player
             _countPassedRings++;
             
             if (_countPassedRings == _ball.StepsForShield)
-            {
                 _ball.ActiveShield();
-                ResetPassedRings();
-            }
         }
 
-        private void ResetPassedRings()
-        {
-            _countPassedRings = 0;
-        }
+        public void ResetPassedRings()
+            => _countPassedRings = 0;
     }
 }

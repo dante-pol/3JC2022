@@ -49,8 +49,7 @@ namespace Root.Assets._Scripts.Player
 
                 ResetShield();
             }
-
-            if (collision.gameObject.CompareTag("dblock"))
+            else if (collision.gameObject.CompareTag("dblock"))
             {
                 _ballController.Jump();
             } 
@@ -59,6 +58,8 @@ namespace Root.Assets._Scripts.Player
                 OnDead?.Invoke();
                 _ballDestroy.Destroy();
             }
+
+            _ballController.ResetPassedRings();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -73,13 +74,11 @@ namespace Root.Assets._Scripts.Player
 
         public void ActiveShield()
         {
-            Debug.Log("Kar kar");
             IsAtiveShield = true;
         }
 
         public void ResetShield()
         {
-            Debug.Log("Label 2");
             IsAtiveShield = false;
         }
     }

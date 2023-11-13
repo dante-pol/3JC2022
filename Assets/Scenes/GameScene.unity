@@ -998,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &795422221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2162,7 +2162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1857664640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2740,6 +2740,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 144835649}
     m_Modifications:
+    - target: {fileID: 875606432, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
+      propertyPath: _farceJump
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9145504356749181702, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
       propertyPath: m_RootOrder
       value: 1
