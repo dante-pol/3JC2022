@@ -1,3 +1,4 @@
+using Root.Assets._Scripts.GUI;
 using Root.Assets._Scripts.Player;
 using Root.Assets._Scripts.Ring;
 using UnityEngine;
@@ -25,16 +26,19 @@ namespace Root.Assets._Scripts.Game
         [SerializeField] private Transform _parentContainer;
         
         private GameBackgroundController _gameBackground;
+        private GUIManager _guiManager;
 
-        public void Init(GameBackgroundController gameBackground)
+        public void Init(GameBackgroundController gameBackground, GUIManager guiManager)
         {
             _gameBackground = gameBackground;
+            _guiManager = guiManager;
         }
 
         public void Build()
         {
             CreateGameZone();
             SetStyleZone();
+            UpdateGUI();
         }
 
         private void CreateGameZone()
@@ -53,6 +57,12 @@ namespace Root.Assets._Scripts.Game
         private void SetStyleZone()
         {
             _gameBackground.ChangeBackground();
+        }
+
+        private void UpdateGUI()
+        {
+            _guiManager.GameProgress.UpdateGameProgress();
+            _guiManager.GameProgress.UpdatePlaceHolder(0);
         }
     }
 }

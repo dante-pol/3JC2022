@@ -33,7 +33,7 @@ namespace Root.Assets._Scripts.Game
             _gameBackground = new GameBackgroundController();
 
             _guiManager.Init(_gameBootstrap.GetGameData);
-            _levelBuilder.Init(_gameBackground);
+            _levelBuilder.Init(_gameBackground, _guiManager);
         }
 
         private void BuildGameplay()

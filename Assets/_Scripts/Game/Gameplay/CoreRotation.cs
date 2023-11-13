@@ -16,6 +16,8 @@ namespace Root.Assets._Scripts.Game.Gameplay
 
         private void Update()
         {
+            if (!InputSystem.IsPlay) return;
+
             if (_swipeDetection.IsSwipeLeft)
                 Rotation(-1);
             else if (_swipeDetection.IsSwipeRight)
