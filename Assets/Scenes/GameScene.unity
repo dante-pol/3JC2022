@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 37377811}
   - component: {fileID: 37377810}
   - component: {fileID: 37377813}
+  - component: {fileID: 37377814}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,6 +221,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &37377814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37377808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b105a6540e7363345a71e19a4fe53e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &122295307
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelBuilder: {fileID: 1686352787}
   _guiManager: {fileID: 1806554283}
+  _gameWin: {fileID: 37377814}
 --- !u!4 &144835649
 Transform:
   m_ObjectHideFlags: 0
@@ -992,6 +1006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795422221}
   - component: {fileID: 795422222}
+  - component: {fileID: 795422223}
   m_Layer: 5
   m_Name: pnl_Loos
   m_TagString: Untagged
@@ -1028,6 +1043,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795422220}
   m_CullTransparentMesh: 1
+--- !u!114 &795422223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795422220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc327b198ff4a9b429bd66535a29647d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &874446635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +2296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88af17d98a07b38439730f5a66c3a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameProgress: {fileID: 2012575968}
+  _panelWin: {fileID: 1857664642}
+  _panelLoss: {fileID: 795422223}
   _btn_Play: {fileID: 1128522475}
 --- !u!1 &1857664639
 GameObject:
@@ -2280,6 +2310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1857664640}
   - component: {fileID: 1857664641}
+  - component: {fileID: 1857664642}
   m_Layer: 5
   m_Name: pnl_Win
   m_TagString: Untagged
@@ -2316,6 +2347,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857664639}
   m_CullTransparentMesh: 1
+--- !u!114 &1857664642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857664639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e54ffa1836183479920220e0d83d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1861461716
 GameObject:
   m_ObjectHideFlags: 0

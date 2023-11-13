@@ -8,13 +8,18 @@ namespace Root.Assets._Scripts.GUI
     public class GUIManager : MonoBehaviour
     {
         public UIGameProgress GameProgress => _gameProgress;
-        private UIGameProgress _gameProgress;
+        [SerializeField] private UIGameProgress _gameProgress;
+
+        public UIPanelWin PanelWin => _panelWin;
+        [SerializeField] private UIPanelWin _panelWin;
+
+        public UIPanelLoss PanelLoss => _panelLoss;
+        [SerializeField] private UIPanelLoss _panelLoss;
 
         [SerializeField] private Button _btn_Play;
 
         public void Init(GameData getGameData)
         {
-            _gameProgress = GetComponentInChildren<UIGameProgress>();
             _gameProgress.Init(getGameData);
         }
 
@@ -31,5 +36,11 @@ namespace Root.Assets._Scripts.GUI
         {
             _btn_Play.onClick.RemoveAllListeners();
         }
+
+        public void SetActivePanelWin(bool value)
+            => _panelWin.gameObject.SetActive(value);
+
+        public void SetActivePanelLoss(bool value)
+            => _panelWin.gameObject.SetActive(value);
     }
 }

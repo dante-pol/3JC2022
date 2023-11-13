@@ -12,5 +12,8 @@ namespace Root.Assets._Scripts.Main
 
         public GameData()
             => _currentLevel = 0;
+
+        public void IncreaseLevel()
+            => _currentLevel++;
     }
 }

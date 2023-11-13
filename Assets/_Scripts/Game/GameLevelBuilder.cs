@@ -63,6 +63,9 @@ namespace Root.Assets._Scripts.Game
         {
             _guiManager.GameProgress.UpdateGameProgress();
             _guiManager.GameProgress.UpdatePlaceHolder(0);
+
+            _guiManager.SetActivePanelWin(false);
+            _guiManager.SetActivePanelLoss(false);
         }
     }
 }
