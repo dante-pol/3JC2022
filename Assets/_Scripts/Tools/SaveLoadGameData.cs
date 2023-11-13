@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Root.Assets._Scripts.Game;
 using Root.Assets._Scripts.Main;
 using UnityEngine;
 
@@ -19,7 +20,14 @@ namespace Root.Assets._Scripts.Tools
         public static GameData Load()
         {
             if (!PlayerPrefs.HasKey(NAME_DATA))
-                return new GameData();
+            {
+                var game = new GameData();
+                string jsonString = JsonConvert.SerializeObject(game);
+
+                PlayerPrefs.SetString(NAME_DATA, jsonString);
+                PlayerPrefs.Save();
+                return game;
+            }
 
             string data = PlayerPrefs.GetString(NAME_DATA);
 
