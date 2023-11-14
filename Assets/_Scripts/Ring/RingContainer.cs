@@ -25,6 +25,7 @@ namespace Root.Assets._Scripts.Ring
             foreach (ObjectExplosion element in _elements)
             {
                 element.Explosion(_explosionForce, _explosionRadius, transform.position);
+                element.DisActiveCollider();
             }
             StartCoroutine(Delete());
         }
