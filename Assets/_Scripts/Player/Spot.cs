@@ -5,7 +5,7 @@ namespace Root.Assets._Scripts.Player
 {
     public class Spot : MonoBehaviour
     {
-        private float _timeLife = 5.5f;
+        private float _timeLife = 1.5f;
         
         private BallSpot _ballSpot;
 
