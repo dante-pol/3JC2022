@@ -2994,10 +2994,6 @@ PrefabInstance:
       propertyPath: _spotParent
       value: 
       objectReference: {fileID: 1786691098}
-    - target: {fileID: 875606432, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
-      propertyPath: _spotPrefab
-      value: 
-      objectReference: {fileID: 5704152394960424879, guid: 1abb58a276227c642a94f130e4cffb05, type: 3}
     - target: {fileID: 9145504356749181702, guid: 4770ddb6f7a96424481384b6411fd0f9, type: 3}
       propertyPath: m_RootOrder
       value: 1

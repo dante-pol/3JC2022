@@ -279,4 +279,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _farceJump: 10
   _spotParent: {fileID: 0}
-  _spotPrefab: {fileID: 0}
+  _spotPrefab: {fileID: 5704152394960424879, guid: 1abb58a276227c642a94f130e4cffb05, type: 3}
