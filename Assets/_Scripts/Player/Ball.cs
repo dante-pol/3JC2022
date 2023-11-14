@@ -66,7 +66,7 @@ namespace Root.Assets._Scripts.Player
                 _ballDestroy.Destroy();
             }
 
-            _ballSpot.MakeSpot(collision.GetContact(0));
+            _ballSpot.MakeSpot(collision.transform.position);
             _ballController.ResetPassedRings();
         }
 

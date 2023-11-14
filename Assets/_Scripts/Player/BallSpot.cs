@@ -20,11 +20,11 @@ namespace Root.Assets._Scripts.Player
         }
 
 
-        public void MakeSpot(ContactPoint contactPoint)
+        public void MakeSpot(Vector3 position)
         {
-            var position = contactPoint.point;
+            var newPos = new Vector3(_ball.transform.position.x, position.y, _ball.transform.position.z);
             var spot = _spotPooling.Extract();
-            spot?.Activate(position, _parent);
+            spot?.Activate(newPos, _parent);
         }
 
         public class SpotPooling
