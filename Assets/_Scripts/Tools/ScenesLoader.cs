@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.SceneManagement;
 
-namespace Root._Scripts.Tools
+namespace Root.Assets._Scripts.Tools
 {
     public enum IDScenes { INIT_SCENE = 0, GAME_SCENE = 1}
 

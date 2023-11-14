@@ -277,4 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc9798e621cc1341b83bb0798281a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _farceJump: 350
+  _farceJump: 10
+  _spotParent: {fileID: 0}
+  _spotPrefab: {fileID: 0}

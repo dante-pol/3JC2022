@@ -1,5 +1,3 @@
-using Root.Assets._Scripts.Game.Gameplay;
-using Root.Assets._Scripts.GUI;
 using Root.Assets._Scripts.Ring;
 using System;
 using UnityEngine;
@@ -23,17 +21,24 @@ namespace Root.Assets._Scripts.Player
         public bool IsAtiveShield { get; private set; }        
 
         public Rigidbody GetRigidbody => _rigidbody;
+        public Transform SpotParent => _spotParent;
+        public Spot SpotPrefab => _spotPrefab;
+
         private Rigidbody _rigidbody;
+        [SerializeField] private Transform _spotParent;
+        [SerializeField] private Spot _spotPrefab;
 
         #region BallBehaviour
         private BallController _ballController;
         private BallDestroy _ballDestroy;
+        private BallSpot _ballSpot;
         #endregion
 
         public void Start()
         {
             _ballController = new BallController(this);
             _ballDestroy = new BallDestroy(this);
+            _ballSpot = new BallSpot(this);
 
             StepsForShield = 3;
             IsAtiveShield = false;
@@ -42,7 +47,7 @@ namespace Root.Assets._Scripts.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (IsAtiveShield)
+            if (IsAtiveShield && collision.gameObject.CompareTag("Finish"))
             {
                 _ballController.Jump();
 
@@ -61,6 +66,7 @@ namespace Root.Assets._Scripts.Player
                 _ballDestroy.Destroy();
             }
 
+            _ballSpot.MakeSpot(collision.GetContact(0));
             _ballController.ResetPassedRings();
         }
 

@@ -1,6 +1,4 @@
-using Root._Scripts.Tools;
 using Root.Assets._Scripts.Tools;
-using System;
 using UnityEngine;
 
 namespace Root.Assets._Scripts.Main
