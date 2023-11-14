@@ -16,6 +16,7 @@ namespace Root.Assets._Scripts.Player
 
         public void Activate(Vector3 position, Transform parent)
         {
+            position.y += .15f;
             transform.position = position;
             transform.parent = parent;
 
