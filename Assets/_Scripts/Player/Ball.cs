@@ -47,7 +47,7 @@ namespace Root.Assets._Scripts.Player
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (IsAtiveShield && collision.gameObject.CompareTag("Finish"))
+            if (IsAtiveShield && !collision.gameObject.CompareTag("Finish"))
             {
                 _ballController.Jump();
 
